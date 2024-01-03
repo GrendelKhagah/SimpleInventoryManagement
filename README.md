@@ -14,17 +14,9 @@ Simple Inventory Management System is a Java-based application designed to help 
 - **Add/Edit Screens**: Dedicated screens for adding or editing products and parts.
 - **Search**: Ability to search for parts or products within the system.
 
-## How to Use
-
-1. **Starting the Application**: Double-click on the `SimpleInventoryManagement.exe` (for Windows) or equivalent file to launch the application.
-2. **Navigating the Dashboard**: Use the dashboard to access the different parts of the application.
-3. **Adding Parts/Products**: Click on the 'Add' button in the respective section to add a new part or product.
-4. **Modifying Parts/Products**: Use the search functionality to find a part or product and click 'Modify' to edit.
-5. **Deleting Parts/Products**: Select a part or product and click 'Delete' to remove it from the inventory.
-
 ## Building from Source
 
-If you wish to build the application from the source, you will need JDK 18 or later and access to the project's NetBeans or equivalent Java IDE project files.
+If you wish to build the application from the source, you will need JDK 18 or later and access to the project's NetBeans or equivalent Java IDE project files(the Zipped Project File can be imported to NetBeans).
 
 ## Contributing
 
