@@ -1,6 +1,6 @@
 # Simple Inventory Management System
 
-Simple Inventory Management System is a Java-based application designed to help small to medium-sized businesses manage their inventory effectively. This system allows for tracking of products and parts, including the ability to add, modify, and delete items within the inventory.
+Simple Inventory Management System is a Java-based application designed to help small to medium-sized businesses manage their inventory effectively. This system allows for tracking of products and parts, including the ability to add, modify, and delete items within the inventory. It was designed for the Western Governors University Software 1 course.
 
 ## Features
 
