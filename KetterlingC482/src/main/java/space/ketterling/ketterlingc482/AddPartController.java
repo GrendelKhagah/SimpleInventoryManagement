@@ -17,9 +17,11 @@ import model.Outsourced;
 import model.Inventory;
 
 /**
- * FXML Controller class
- *
- * @author Taylor Ketterling
+ * addPart.fxml Controller 
+ * collects part form data to create a new part
+ * validates data and provides feedback about errors
+ * 
+ * @author Taylor
  */
 public class AddPartController implements Initializable {
 
@@ -50,6 +52,13 @@ public class AddPartController implements Initializable {
     @FXML
     private Label uniqueLabel;
     
+    
+    /**
+     * cancelAction is used to close pager and return user to main menu
+     * 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     void cancelAction(ActionEvent event) throws IOException {
         returnToMain(event);
@@ -79,14 +88,14 @@ public class AddPartController implements Initializable {
                     Outsourced newPart = new Outsourced(Inventory.NewPartID(), Name, price, stock, min, max, companyName);
                     Inventory.addPart(newPart);
                 }
+                displayAlert(6);
                 returnToMain(event);
             }
         } catch(NumberFormatException e) {
             displayAlert(5);
         } catch (IOException e) {
             displayAlert(2);
-        }
-        
+        } 
     }
     
     /**
@@ -101,7 +110,7 @@ public class AddPartController implements Initializable {
     }
     
     /**
-     * Set the uniqueLabel to Company Name
+     * Sets the uniqueLabel to Company Name
      * 
      * @param event 
      */
@@ -169,6 +178,11 @@ public class AddPartController implements Initializable {
                 alertError.setHeaderText("Issue With Data when generating new part");
                 alertError.showAndWait();
                 break;
+            case 6:
+                alert.setTitle("Information");
+                alert.setHeaderText("Save Successful");
+                alert.showAndWait();
+                break;
         }
     }
     
@@ -188,6 +202,12 @@ public class AddPartController implements Initializable {
         } return true;
     }
     
+    /**
+     * Initializes page with empty fields.
+     * 
+     * @param url                   resource location
+     * @param rb                    resource bundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // leave empty, nothing to initialize

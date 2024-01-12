@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ketterling C482 Readme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .comment {
+            margin-bottom: 20px;
+        }
+        .comment-header {
+            font-weight: bold;
+        }
+        .comment-text {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Project Readme: KetterlingC482</h1>
+    <h4>Author: <em>Taylor Ketterling</em></h4>
+
+    <!-- Section -->
+    <div class="comment">
+        <div class="comment-header">JavaDoc Location</div>
+        <div class="comment-text">
+            <p>JavaDoc Location: "KetterlingC482\target\site\apidocs\index.html"</p>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="comment">
+        <div class="comment-header">File Tree</div>
+        <div class="comment-text">
+            <ul>
+                <li>/KetterlingC482
+                    <ul>
+                        <li>/src
+                            <ul>
+                                <li>/main
+                                    <ul>
+                                        <li>/java
+                                            <ul>
+                                                <li>/model
+                                                    <ul>
+                                                        <li>InHouse.java</li>
+                                                        <li>Inventory.java</li>
+                                                        <li>OutSourced.java</li>
+                                                        <li>Part.java</li>
+                                                        <li>Product.java</li>
+                                                    </ul>
+                                                </li>
+                                                <li>/space/ketterling/ketterlingc482
+                                                    <ul>
+                                                        <li>AddPartController.java</li>
+                                                        <li>AddProductController.java</li>
+                                                        <li><strong>App.java</strong></li>
+                                                        <li>MainController.java</li>
+                                                        <li>ModifyPartController.java</li>
+                                                        <li>ModifyProductController.java</li>
+                                                    </ul>
+                                                </li>
+                                                <li>module-info.java</li>
+                                            </ul>
+                                        </li>
+                                        <li>/resources/space/ketterling/ketterlingc482
+                                            <ul>
+                                                <li>addPart.fxml</li>
+                                                <li>addProduct.fxml</li>
+                                                <li>main.fxml</li>
+                                                <li>modifyPart.fxml</li>
+                                                <li>modifProduct.fxml</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>/target
+                            <ul>
+                                <li>/classes</li>
+                                <li>/generated-sources</li>
+                                <li>/javadoc-bundle-options</li>
+                                <li>/maven-satus</li>
+                                <li>/site/apidocs
+                                    <ul>
+                                        <li><strong>index.html</strong></li>
+                                    </ul>
+                                </li>
+                                <li>maven-javadoc-plugin-stale-data.txt</li>
+                            </ul>
+                        </li>
+                        <li>ReadMe.html</li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="comment">
+        <div class="comment-header">Enhancements</div>
+        <div class="comment-text">
+            <p> * JavaFX desktop application for Simple Inventory Management GUI</br>
+                * JavaDoc Location: "KetterlingC482\target\site\apidocs\index.html"</br>
+                * </br>
+                * </br>
+                * Enhancement plan:</br>
+                * => First Database Integration for Persistent Inventory Management:</br>
+                *  Consider embedding SQLite for a lightweight, serverless database for data .</br>
+                *  Explore H2 Database, which offers both embedded and server modes and supports disk-based or in-memory databases.</br>
+                *  Evaluate Firebird SQL for more robust features, available in both embedded and server modes. Super Open-source</br>
+                *  Ultimately deploy an option that enables localized storage options </br>
+                *  Support Database back-up to USB </br>
+                *  Support Database restore from USB</br>
+                * </br>
+                * => Transition project to Endpoint Inventory Management System:</br>
+                *  Expand the application scope from managing Parts and Products to managing Devices and People.</br>
+                *  This transition is aimed at adding real-world practicality, particularly for IT administration in environments like schools, where there's a need for tracking device loan liability and conducting audits.</br>
+                *  As an IT administrator in such an environment, this functionality is crucial for managing and tracking the lifecycle of devices, ensuring accountability and efficient resource allocation.</br>
+                *  Implement features to support the transfer of device ownership:</br>
+                *     -> Enable the system to facilitate the transfer of device ownership between individuals (students, staff) and administrative entities (like classes, departments).</br>
+                *     -> This can include assigning devices to specific classes for educational purposes, or reallocating devices to different departments for administrative use.</br>
+                *     -> Develop a user-friendly interface for administrators to easily update ownership records, ensuring a smooth transition when devices are reallocated or repurposed within the organization setting.</br>
+                *     -> Implement robust logging and tracking capabilities to maintain a transparent history of ownership transfers, which is essential for audit trails and accountability.</br>
+                *</br>
+                * => Features for Device Management:</br>
+                *  Implement bulk device enrollment, allowing large field inputs for efficient data entry (copy-paste functionality from existing device lists).</br>
+                *  Include a feature to add new devices individually or in bulk.</br>
+                * </br>
+                * => People Management and Device-Person Association:</br>
+                *  Introduce functionality for bulk addition of people.</br>
+                *  Develop features to associate devices with people, facilitating tracking of loaned/responsible equipment.</br>
+                *  Support smart contracts for loan agreements and automated reminders</br>
+                *  Support Email / SMS Reminders for agreement landmarks and milestones or duty requirements.</br>
+                *     -> If a device is assigned to person as a loaner it may have requirements such as when to return a device by and fees associated with failure to comply with terms.</br>
+                *     -> Milestones can be set for specific Device Types, such as loaners, individually assigned, or leased.</br>
+                *     -> A loaner may be free upfront so long it is return according to miles stone terms, such as a week after lent out.</br>
+                *     -> Milestones may trigger reminders or announcements, so long person has applicable contact data.</br>
+                *  Support guardian role for associating People to their Guardians(students to parents), Guardians may have contact information that recieves alerts depending on milestone alert</br>
+                * </br>
+                * => Peripheral Device Support:</br>
+                *  Add support for USB-connected barcode scanners to facilitate input via QR Codes of device ID or S/n </br>
+                *  Search by QR Code scanner input</br>
+                *  Support QR Code form input on add Device and People forms. </p>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="comment">
+        <div class="comment-header">Runtime Error</div>
+        <div class="comment-text">
+            <p>Error Location: src/main/java/module-info.java</p>
+            <p>* RUNTIME ERROR </br>
+                *</br>
+                * --- javafx:0.0.4:run (default-cli) @ KetterlingC482 ---</br>
+                * Dec 08, 2023 11:55:04 PM javafx.fxml.FXMLLoader$ValueElement processValue</br>
+                * WARNING: Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 13</br>
+                * Dec 08, 2023 11:55:06 PM javafx.fxml.FXMLLoader$ValueElement processValue</br>
+                * WARNING: Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 13</br>
+                * Dec 08, 2023 11:55:19 PM javafx.fxml.FXMLLoader$ValueElement processValue</br>
+                * WARNING: Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 13</br>
+                * Dec 08, 2023 11:55:19 PM javafx.scene.control.cell.PropertyValueFactory getCellDataReflectively</br>
+                * WARNING: Can not retrieve property 'id' in PropertyValueFactory: javafx.scene.control.cell.PropertyValueFactory@17020b8d with provided class type: class model.InHouse</br>
+                * java.lang.RuntimeException: java.lang.IllegalAccessException: module javafx.base cannot access class model.Part (in module space.ketterling.ketterlingc482) because module space.ketterling.ketterlingc482 does not open model to javafx.base</br>
+                * </br>
+                * Fixed by opening model to javafx.base and .fxml</p>
+        </div>
+    </div>
+
+
+</body>
+</html>

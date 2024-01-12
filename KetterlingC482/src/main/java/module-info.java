@@ -1,6 +1,8 @@
 /**
  * Module information for the KetterlingC482 App.
  * Specifies the required modules and dependencies needed by this application.
+ * 
+ * JavaDoc Location: "KetterlingC482\target\site\apidocs\index.html"
  */
 module space.ketterling.ketterlingc482 {
     requires javafx.controls;
@@ -8,8 +10,8 @@ module space.ketterling.ketterlingc482 {
     requires java.base;
 
     opens space.ketterling.ketterlingc482 to javafx.fxml;
-    /*
-     * RUNTIME ERROR
+    /**
+     * RUNTIME ERROR 
      *
      * --- javafx:0.0.4:run (default-cli) @ KetterlingC482 ---
      * Dec 08, 2023 11:55:04 PM javafx.fxml.FXMLLoader$ValueElement processValue

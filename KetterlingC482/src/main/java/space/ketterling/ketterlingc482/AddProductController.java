@@ -121,12 +121,14 @@ public class AddProductController implements Initializable {
             displayAlert(3);
         } else {
             tempAssociatedParts.remove(partToRemove);
+            displayAlert(6);
             
         }
     }
     
     /**
-     * Saves the user data 
+     * saveAction saves the product information by creating a new product and adding it to the inventory
+     * it catches several errors and displays alerts upon success or errors.
      * 
      * @param event 
      */
@@ -144,6 +146,7 @@ public class AddProductController implements Initializable {
                     newProduct.addAssociatedPart(part);
                 }
                 Inventory.addProduct(newProduct);
+                displayAlert(7);
                 returnToMain(event);
             }
         } catch(NumberFormatException e) {
@@ -213,11 +216,22 @@ public class AddProductController implements Initializable {
                 errorAlert.setHeaderText("Issue With Data when generating new part");
                 errorAlert.showAndWait();
                 break;
+            case 6:
+                infoAlert.setTitle("Information");
+                infoAlert.setHeaderText("Associated Part Removed");
+                infoAlert.showAndWait();
+                break;
+            case 7:
+                infoAlert.setTitle("Information");
+                infoAlert.setHeaderText("Product Save Successful");
+                infoAlert.showAndWait();
+                break;
         }
     }
      
     /**
      * Searches for parts based on the given search text.
+     * 
      * @param searchText    The text to search for in product names or IDs.
      */
     @FXML
@@ -262,6 +276,8 @@ public class AddProductController implements Initializable {
     
     /**
      * Initializes the controller class.
+     * @param url   resource location
+     * @param rb    resource bundle
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

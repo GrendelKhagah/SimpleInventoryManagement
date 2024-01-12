@@ -18,7 +18,8 @@ import model.Outsourced;
 import model.Inventory;
 
 /**
- * FXML Controller class
+ * Controller Class for the modifyPart.fxml page
+ * allows for part modification
  *
  * @author Taylor Ketterling
  */
@@ -53,6 +54,13 @@ public class ModifyPartController implements Initializable {
     @FXML
     private Label uniqueLabel;
     
+    
+    /**
+     * cancelAction is used to close pager and return user to main menu
+     * 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     void cancelAction(ActionEvent event) throws IOException {
         switchScene(event, "main.fxml");

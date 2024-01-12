@@ -23,8 +23,9 @@ import model.Part;
 import model.Product;
 
 /**
- * FXML Controller class 
- *
+ * Controller Class for the modifyProduct.fxml page
+ * allows for Product modification and part association or removal
+ * 
  * @author Taylor Ketterling
  */
 public class ModifyProductController implements Initializable {
@@ -95,7 +96,12 @@ public class ModifyProductController implements Initializable {
     private static ObservableList<Part> tempAssociatedParts = FXCollections.observableArrayList();
     
     
-    
+    /**
+     * cancelAction is used to close pager and return user to main menu
+     * 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     void cancelAction(ActionEvent event) throws IOException {
         returnToMain(event);
@@ -117,7 +123,8 @@ public class ModifyProductController implements Initializable {
     }
     
     /**
-     * removes an associated part from the associate parts list, used in product creation
+     * removes an associated part from the associate parts list, used in product modification
+     * displays success alert when associated part removed
      * 
      * @param event 
      */
@@ -128,6 +135,7 @@ public class ModifyProductController implements Initializable {
             displayAlert(3);
         } else {
             tempAssociatedParts.remove(partToRemove);
+            displayAlert(6);
             
         }
     }
@@ -221,6 +229,11 @@ public class ModifyProductController implements Initializable {
                 errorAlert.setTitle("NumberFormatException");
                 errorAlert.setHeaderText("Issue With Data when generating new part");
                 errorAlert.showAndWait();
+                break;
+            case 6:
+                infoAlert.setTitle("Information");
+                infoAlert.setHeaderText("Associated Part Removed");
+                infoAlert.showAndWait();
                 break;
         }
     }

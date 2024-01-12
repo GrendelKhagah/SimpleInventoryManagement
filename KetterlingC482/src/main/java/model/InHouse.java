@@ -9,7 +9,7 @@ public class InHouse extends Part{
     private int machineId; //Machine ID for inhouse Part, Private
     
     /**
-     * Constructs a new instance of an Inhouse object.
+     * calling InHouse Constructs a new instance of an Inhouse object.
      *
      * @param id            Product ID number, unique
      * @param name          Product Name
@@ -25,7 +25,7 @@ public class InHouse extends Part{
     }
     
     /**
-     * Sets the machine ID for the inhoused part
+     * setMachineId Sets the machine ID for the inhoused part
      * @param machineId     MachineId part was made on
      */
     public void setMachineId(int machineId) {
@@ -33,7 +33,7 @@ public class InHouse extends Part{
     }
     
     /**
-     * Gets the machine ID of this inhoused part
+     * getMachineID Gets the machine ID of this inhoused part
      * @return              The Machine Id of the part
      */
     public int getMachineId() {

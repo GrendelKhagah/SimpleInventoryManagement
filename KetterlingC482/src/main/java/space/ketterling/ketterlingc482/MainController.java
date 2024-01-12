@@ -1,3 +1,4 @@
+// JavaDoc Location: "KetterlingC482\target\site\apidocs\index.html"
 package space.ketterling.ketterlingc482;
 
 import javafx.fxml.FXML;
@@ -261,7 +262,7 @@ public class MainController implements Initializable {
             case 5:
                 errorAlert.setTitle("Error");
                 errorAlert.setHeaderText("Parts Associated");
-                errorAlert.setContentText("All parts must be removed from product before deletion.");
+                errorAlert.setContentText("All parts must be removed from product before deletion. Please Remove Parts before Deletion");
                 errorAlert.showAndWait();
                 break;
             case 6:

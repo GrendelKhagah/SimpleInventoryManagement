@@ -1,0 +1,12 @@
+model\Part.class
+model\Outsourced.class
+space\ketterling\ketterlingc482\App.class
+space\ketterling\ketterlingc482\AddPartController.class
+model\InHouse.class
+space\ketterling\ketterlingc482\ModifyProductController.class
+space\ketterling\ketterlingc482\ModifyPartController.class
+module-info.class
+model\Product.class
+space\ketterling\ketterlingc482\MainController.class
+space\ketterling\ketterlingc482\AddProductController.class
+model\Inventory.class

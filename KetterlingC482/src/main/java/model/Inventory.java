@@ -168,6 +168,12 @@ public class Inventory{
      *
      * @return allParts ObersvableList<Part>, empty if no Parts
      */
+
+    /**
+     *
+     * @return
+     */
+
     public static ObservableList<Part> getAllParts() {return allParts;}
     
     /*
@@ -175,5 +181,11 @@ public class Inventory{
      *
      * @return allProduct ObersvableList<Product>, empty if no Products
      */
+
+    /**
+     *
+     * @return
+     */
+
     public static ObservableList<Product> getAllProducts() {return allProducts;}
 }
